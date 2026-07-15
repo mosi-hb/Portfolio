@@ -1,15 +1,24 @@
 ---
 import "../styles/global.css";
-import logo from '../assets/Logo.svg';
+import logo from "../assets/Logo.svg";
+import { Image } from "astro:assets";
 ---
-
 
 <div class="bg-[#171717] w-full h-12 flex justify-between items-center p-5">
   <div class="h-10">
-    <img src={logo.src} alt="Logo" fetchpriority="high" class="size-full " />
+    <Image
+      src={logo}
+      alt="Logo"
+      fetchpriority="high"
+      class="size-full"
+      priority
+    />
   </div>
 
   <div class="text-[#EEEEEE] text-xl">
-	<p><span class="font-bold cursor-pointer">EN</span>/<span class="cursor-pointer">ES</span></p>
+    <p>
+      <span class="font-bold cursor-pointer">EN</span>/<span
+        class="cursor-pointer">ES</span>
+    </p>
   </div>
 </div>

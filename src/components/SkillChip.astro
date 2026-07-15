@@ -1,0 +1,15 @@
+---
+import "../styles/global.css";
+
+type Props = {
+  text: string;
+};
+
+const { text } = Astro.props;
+---
+
+<div
+  class="px-2 py-1 text-sm text-[#EEEEEE] border border-[#EEEEEE] rounded-sm max-h-7 capitalize"
+>
+  {text}
+</div>

@@ -1,10 +1,61 @@
 ---
-import Main from '../components/Main.astro';
-import Navbar from '../components/Navbar.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Hero from "../components/Hero.astro";
+import Skills from "../components/Skills.astro";
+import Contacts from "../components/Contacts.astro";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+
+import "../styles/global.css";
+
+const skills = {
+  languages: ["python", "java", "typescript", "javascript", "SQL"],
+  frameworks: ["angular", "astro", "tailwind", "django", "spring boot"],
+  DevOps: ["docker", "kubernetes", "helm", "git"],
+};
 ---
 
 <Layout>
-	<Navbar />
-	<Main />
+  <Navbar />
+
+  <div
+    class="md:justify-center md:items-center sm:flex-col flex-1 flex px-10 py-5 space-y-3"
+  >
+    <!-- About Me -->
+    <div
+      class="w-full max-w-300 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7 flex space-x-10"
+    >
+      <Hero />
+    </div>
+
+    <div
+      class="w-full max-w-300 lg:grid lg:grid-cols-10 md:flex md:flex-col gap-3"
+    >
+      <div
+        class="col-span-4 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7 flex flex-col space-y-2"
+      >
+        <Skills skills={skills} />
+      </div>
+
+      <div
+        class="col-span-3 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7"
+      >
+        <Contacts />
+      </div>
+
+      <div
+        class="col-span-3 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7"
+      >
+        <Experience />
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div
+      class="w-full h-100 max-w-300 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7"
+    >
+      <Projects />
+    </div>
+  </div>
 </Layout>
