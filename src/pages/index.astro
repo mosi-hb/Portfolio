@@ -14,6 +14,27 @@ const skills = {
   frameworks: ["angular", "astro", "tailwind", "django", "spring boot"],
   DevOps: ["docker", "kubernetes", "helm", "git"],
 };
+
+const contacts = [
+  {
+    icon: "envelope",
+    title: "Email",
+    information: "mosi.hickman2006@gmail.com",
+    link: "mailto:mosi.hickman2006@gmail.com",
+  },
+  {
+    icon: "linkedin",
+    title: "LinkedIn",
+    information: "linkedin.com/in/mosi-hickman-blanco/",
+    link: "https://www.linkedin.com/in/mosi-hickman-blanco/",
+  },
+  {
+    icon: "github",
+    title: "GitHub",
+    information: "github.com/mosi-hb",
+    link: "https://github.com/mosi-hb",
+  },
+];
 ---
 
 <Layout>
@@ -39,9 +60,9 @@ const skills = {
       </div>
 
       <div
-        class="col-span-3 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7"
+        class="col-span-3 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7 flex flex-col space-y-5"
       >
-        <Contacts />
+        <Contacts contacts={contacts} />
       </div>
 
       <div
