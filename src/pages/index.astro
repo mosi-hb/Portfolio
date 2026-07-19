@@ -35,6 +35,32 @@ const contacts = [
     link: "https://github.com/mosi-hb",
   },
 ];
+
+const projects = [
+  {
+    title: "DESPACE",
+    description: "Platform for deploying FIWARE dataspace components.",
+    skills: ["Django", "Angular", "Tailwind", "Kubernetes", "Helm"],
+  },
+  {
+    title: "IANUS",
+    description:
+      "Platform for extracting, transforming, and integrating data across services.",
+    skills: ["Django", "Angular", "Tailwind", "Kubernetes"],
+  },
+  {
+    title: "HUCAIN",
+    description:
+      "Component designed for integration into dataspaces to calculate organizations’ carbon footprints.",
+    skills: ["Django", "Angular", "Tailwind", "Kubernetes"],
+  },
+  {
+    title: "Azeria",
+    description:
+      "Platform that processes architectural sensor data and presents it as easy to understand information through a web interface.",
+    skills: ["Django", "Angular", "Tailwind", "Kubernetes", "Helm"],
+  },
+];
 ---
 
 <Layout>
@@ -74,9 +100,9 @@ const contacts = [
 
     <!-- Projects -->
     <div
-      class="w-full h-100 max-w-300 bg-[#171717] border border-[#414141] rounded-xl py-5 px-7"
+      class="w-full h-100 max-w-300 max-h-100 overflow-y-auto bg-[#171717] border border-[#414141] rounded-xl py-5 px-7 flex flex-col space-y-5"
     >
-      <Projects />
+      <Projects projects={projects} />
     </div>
   </div>
 </Layout>
