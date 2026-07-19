@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-import SkillChip from "./SkillChip.astro";
+import Chip from "./Chip.astro";
 
 type Props = {
   skills: Record<string, string[]>;
@@ -21,7 +21,7 @@ const { skills } = Astro.props;
 
       <div class="w-full flex mt-1 space-x-2 flex-wrap space-y-2">
         {values.map((val: string) => (
-          <SkillChip text={val} />
+          <Chip text={val} />
         ))}
       </div>
     </div>
